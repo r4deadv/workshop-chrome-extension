@@ -1,6 +1,13 @@
 function cheesify() {
-  // TODO: Add the image replacement script here
+  const images = document.querySelectorAll('img');
+  images.forEach(image => {
+    image.src = `https://picsum.photos/${image.width}/${image.height}?${Math.random(10000)}`;
+    image.srcset = image.src;
+  })
 }
 
-// TODO: Write a function to listen for messages on the content page using chrome.runtime.onMessage
-  
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.action === 'cheesify') cheesify();
+  }
+);
