@@ -3,7 +3,7 @@
     "name": "My first Chrome Extension",
     "description": "Chrome extension workshop for Le Wagon Tokyo",
     "author": "r4de stillTesting",
-    "version": "0.2",
+    "version": "0.3",
     "permissions": ["tabs"],
     "content_scripts": [
       {
